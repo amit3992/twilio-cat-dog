@@ -1,0 +1,20 @@
+{
+  "name": "amit-happy-cat",
+  "version": "1.0.0",
+  "description": "Cap api + twilio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cat-api",
+    "twilio"
+  ],
+  "author": "Amit Kulkarni",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^1.7.3",
+    "twilio": "^3.11.1",
+    "yargs": "^11.0.0"
+  }
+}
