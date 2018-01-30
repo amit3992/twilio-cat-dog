@@ -1,5 +1,6 @@
 const yargs = require('yargs');
 const cat = require('./cat-api/cats');
+const pup = require('./dog/pup');
 const text = require('./text/smsUtil');
 
 const argv = yargs
@@ -39,14 +40,14 @@ if(type == 'cat') {
     cat.fetchURL((error, imageURL) => {
     
     if(error) {
-        console.log('Error: ' + error);
+        console.log('Error in fetching cat images: ' + error);
     }
-    
+
     let url = imageURL.url;
     text.sendText(name, url, msg, (err, done) => {
         
         if(err) {
-            console.log('Error in calling sendText from index: ' + err);
+            console.log('Error in calling sendText from index.js: ' + err);
         } 
         
         console.log(done); 
@@ -56,6 +57,22 @@ if(type == 'cat') {
     });
 } else if(type == 'dog') {
     /* In progress */
-    console.log('Fetching puppy images..');
+    pup.fetchURL((err, pupURL) => {
+        if(err) {
+            console.log('Error in fetching image urls for dogs : ' + err);
+        }
+
+        let url = pupURL.url;
+
+        text.sendText(name, url, msg, (err, done) => {
+        
+        if(err) {
+            console.log('Error in calling sendText from index.js: ' + err);
+        } 
+        
+        console.log(done); 
+    });
+
+    });
 }
 

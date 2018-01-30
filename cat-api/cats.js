@@ -1,8 +1,6 @@
 const fetch = require('node-fetch');
 const secret = require('../secrets/secret');
 
-var catURL = 'catURL';
-
 const fetchURL = (callback) => {
     console.log('Fetching cat image..');
     getCat()
@@ -10,7 +8,7 @@ const fetchURL = (callback) => {
             url : imgURL
         }))
         .catch((reason) => {
-            callback('Error: ' + reason.message);
+            callback('Error: ' + reason.message, undefined);
         });
   
 };
