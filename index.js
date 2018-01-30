@@ -32,9 +32,6 @@ var name = argv.name;
 var type = argv.type.toLowerCase();
 var msg = argv.message;
 
-//console.log('Address: ' + name + ", type: " + type);
-//console.log('Message in text: ' + msg);
-
 if(type == 'cat') {
 
     cat.fetchURL((error, imageURL) => {
@@ -44,6 +41,7 @@ if(type == 'cat') {
     }
 
     let url = imageURL.url;
+    
     text.sendText(name, url, msg, (err, done) => {
         
         if(err) {
@@ -53,10 +51,9 @@ if(type == 'cat') {
         console.log(done); 
     });
 
-    //console.log('Send pic to: ' + name + ' with the message: ' + msg);
     });
 } else if(type == 'dog') {
-    /* In progress */
+   
     pup.fetchURL((err, pupURL) => {
         if(err) {
             console.log('Error in fetching image urls for dogs : ' + err);

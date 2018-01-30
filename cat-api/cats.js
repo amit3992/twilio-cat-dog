@@ -8,7 +8,7 @@ const fetchURL = (callback) => {
             url : imgURL
         }))
         .catch((reason) => {
-            callback('Error: ' + reason.message, undefined);
+            callback(reason.message, undefined);
         });
   
 };
