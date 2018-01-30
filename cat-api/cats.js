@@ -15,11 +15,6 @@ const fetchURL = (callback) => {
   
 };
 
-const getCatURL = (imageURL) => {
-    console.log('Image URL: ' + imageURL);
-    return imageURL;
-}
-
 const getCat = () => {
     return fetch(`http://thecatapi.com/api/images/get?api_key=$MjY4MTk2&format=html`)
     .then((response) => response.text())

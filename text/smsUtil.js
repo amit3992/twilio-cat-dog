@@ -29,7 +29,7 @@ const sendText = (name, imageURL, message, callback) => {
                 callback(message.sid);
             }
             
-            callback(undefined, 'SUCCESS! Cat picture sent to ' + name + ' with the message : ' + message.body + ' @ ' + recipient);
+            callback(undefined, 'SUCCESS! Picture sent to ' + name + ' with the message : ' + message.body + ' @ ' + recipient);
         }
     );
 }

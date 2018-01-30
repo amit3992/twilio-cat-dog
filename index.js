@@ -40,9 +40,9 @@ if(type == 'cat') {
     
     if(error) {
         console.log('Error: ' + error);
-    } 
-    let url = imageURL.url;
+    }
     
+    let url = imageURL.url;
     text.sendText(name, url, msg, (err, done) => {
         
         if(err) {
@@ -55,6 +55,7 @@ if(type == 'cat') {
     //console.log('Send pic to: ' + name + ' with the message: ' + msg);
     });
 } else if(type == 'dog') {
+    /* In progress */
     console.log('Fetching puppy images..');
 }
 
