@@ -8,7 +8,9 @@ This application will send a text with a new picture of either a dog or a cat to
 Usage:
 
 --name : Who do you want to send the text to
+
 -t (type) : 'dog' or 'cat' pictures
+
 -m (message) : Send the picture with this message
 
 * node index.js --name "Amit" -t "dog" -m "Here is a pupicture for you"
