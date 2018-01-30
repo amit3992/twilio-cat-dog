@@ -1,15 +1,14 @@
 # twilio-cat-dog
 
-**For cheering up a friend**
-
 Command line application built with Node + Twilio + random-puppy + cat-api.
 This application will send a text with a new picture of either a dog or a cat to a friend who needs some cheering up!
 
-Usage
+**Perfect for cheering up a friend**
+
+Usage:
+
 --name : Who do you want to send the text to
-
 -t (type) : 'dog' or 'cat' pictures
-
 -m (message) : Send the picture with this message
 
 * node index.js --name "Amit" -t "dog" -m "Here is a pupicture for you"
