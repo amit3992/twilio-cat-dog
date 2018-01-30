@@ -13,10 +13,10 @@ Usage:
 
 -m (message) : Send the picture with this message
 
-* node index.js --name "Amit" -t "dog" -m "Here is a pupicture for you"
+* `node index.js --name "Amit" -t "dog" -m "Here is a pupicture for you"`
 Fetching puppy image..
 SUCCESS! Picture sent to Amit with the message : Here is a pupicture for you @ +1XXX-YYY-ZZZZ
 
-* node index.js --name "Amit" -t "cat" -m "Here is a kitty picture for you."
+* `node index.js --name "Amit" -t "cat" -m "Here is a kitty picture for you."`
 Fetching cat image..
 SUCCESS! Picture sent to Amit with the message : Here is a kitty picture for you. @ +1XXX-YYY-ZZZZ
