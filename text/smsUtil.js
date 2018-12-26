@@ -14,7 +14,7 @@ const sendText = (name, imageURL, message, callback) => {
     if(name == 'Alida' || name == 'alida') {
         recipient = secret.AlidaNum;
     }
-
+    console.log(recipient);
     client.messages.create(
         {
             to: recipient,
@@ -26,7 +26,7 @@ const sendText = (name, imageURL, message, callback) => {
             
             if(err) {
                 console.log('Error in sendText: ' + err);
-                callback(message.sid);
+                callback(message);
             }
             
             callback(undefined, 'SUCCESS! Picture sent to ' + name + ' with the message : ' + message.body + ' @ ' + recipient);

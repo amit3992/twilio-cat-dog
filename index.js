@@ -60,7 +60,7 @@ if(type == 'cat') {
         }
 
         let url = pupURL.url;
-
+        console.log(url);
         text.sendText(name, url, msg, (err, done) => {
         
         if(err) {
