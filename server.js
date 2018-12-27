@@ -11,15 +11,18 @@ app.get("/", (req, res) => {
 });
 
 app.post('/sms', (req, res) => {
+    
     const twiml = new MessagingResponse();
 
-  if (req.body.Body == 'hello') {
-    twiml.message('Hi!');
-  } else if (req.body.Body == 'bye') {
-    twiml.message('Goodbye');
+  if (req.body.Body && req.body.Body.toLowerCase().includes('weebo')) {
+    twiml.message("Hi! I'm Weebo! Reply with 'dog' for a picture of a cute puppy or 'cat' for a cute kitty");
+  } else if (req.body.Body && req.body.Body.includes('dog')) {
+    twiml.message('Sending doggie pic');
+  }else if (req.body.Body && req.body.Body.includes('cat')) {
+    twiml.message('sending kitty pic');
   } else {
     twiml.message(
-      'No Body param match!'
+        "Oh no! I don't know what that means yet :( Reply with 'dog' for a picture of a cute puppy or 'cat' for a cute kitty."
     );
   }
 
